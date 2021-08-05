@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Shopping Cart</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <link rel="stylesheet" href="bootstrap.min.css">
+   <link href="index.css" rel="stylesheet">
+</head>
+<body>
+   <section>
+      <div class="container">
+         <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+               <div class="cart-item" id="phone-area">
+                  <div class="row">
+                     <div class="col-md-7 center-item"> <!-- product image -->
+                        <img src="product-1.png" alt="">
+                        <h5>iPhone 10  (Black) </h5>
+                     </div>
+
+     <!-- i-phone price increse and decrease button -->
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+
+                           <button onclick="handleProduct(false, 'phn')" class="btn btn-default" id="phn-decrise">  <i class="fas fa-minus">  </i>  </button>
+
+                           <input type="text" class="form-control text-center" value="1" id="phn-input">
+
+                           <button onclick="handleProduct(true, 'phn')" class="btn btn-default" id="phn-incrise"><i class="fas fa-plus"> </i>  </button>
+                        </div>
+                        <h5>$ <span id="phn-price">1399</span></h5>
+                        <img src="remove.png" alt="" class="remove-item" id="romove-phone">
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+               
+   <!-- Phone cover/Caseing -->
+               <div class="cart-item" id="caseing-area">
+                  <div class="row">
+                     <div class="col-md-7 center-item mx-auto">
+                        <img src="product-2.png" alt="">
+                        <h5>iPhone 10 Silicone Case - Black</h5>
+                     </div>
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+
+            <!-- casing price increse and decrise button -->
+                           <button onclick="handleProduct(false, 'case')" class="btn btn-default"><i class="fas fa-minus" id="case-decrise"></i></button>
+
+                           <input id="case-input" type="text" class="form-control text-center" value="1">
+
+                           <button onclick="handleProduct(true, 'case')" class="btn btn-default" id="case-incrise"><i class="fas fa-plus"></i></button>
+
+                        </div>
+                        <h5>$ <span id="case-price">75</span></h5>
+                        <img src="remove.png" alt="" class="remove-item" id="remove-caseing">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+
+                     <div class="col-md-8">
+                        <h5>Total Price : </h5>
+                        <h5>Tax:</h5>
+                        <h5>Total:</h5>
+                     </div>
+
+                     <div class="col-md-4 status">
+                        <h5>$ <span id="total">1474</span> </h5>
+                        <h5>$ <span id="tax-amount">147</span></h5>
+                        <h5>$ <span id="grand-total">1621</span></h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 pt-4 pb-4">
+                  <button type="button" class="btn btn-success check-out">Check Out</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+<script src="index.js"></script>
+</body>
+</html>
