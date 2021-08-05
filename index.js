@@ -22,11 +22,11 @@ function handleProduct(isIncrise, product){
     
     document.getElementById(product + '-price').innerText = totalPrice;
 
-    NetTotal();
+    FullPrice();
 }
 
 
-function NetTotal(){
+function FullPrice(){
     const totalPhonePrice = document.getElementById('phn-price').innerText;
     const totalPhonePriceNumber = parseInt(totalPhonePrice);
 
